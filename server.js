@@ -39,6 +39,15 @@ const itemSchema = new mongoose.Schema({
     }
   });
   
+  app.get('/api/test', async (req, res) => {
+    try {
+      
+      res.json("items");
+    } catch (err) {
+      res.status(500).json({ error: 'Failed to fetch items' });
+    }
+  });
+  
   app.post('/api/items', authenticateToken, async (req, res) => {
     try {
       const newItem = new Item(req.body);
