@@ -40,6 +40,7 @@ const itemSchema = new mongoose.Schema({
   });
   
   app.get('/api/test', async (req, res) => {
+    console.log("called")
     try {
       
       res.json("items");
