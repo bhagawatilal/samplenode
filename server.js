@@ -12,10 +12,10 @@ const mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/mydatabase'
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-mongoose
-  .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((err) => console.error('Error connecting to MongoDB:', err));
+// mongoose
+//   .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+//   .then(() => console.log('Connected to MongoDB'))
+//   .catch((err) => console.error('Error connecting to MongoDB:', err));
 
 // Routes
 app.use('/api/auth', authRoutes);

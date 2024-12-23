@@ -8,7 +8,7 @@ const router = express.Router();
 const SECRET_KEY = process.env.JWT_SECRET || 'default_secret_key';
 
 // Register Route
-router.post('/register', async (req, res) => {
+router.post('', async (req, res) => {
   try {
     const { username, email, password } = req.body;
     const user = new User({ username, email, password });
