@@ -43,7 +43,7 @@ const itemSchema = new mongoose.Schema({
     console.log("called")
     try {
       
-      res.json("items");
+      res.json("items123");
     } catch (err) {
       res.status(500).json({ error: 'Failed to fetch items' });
     }
@@ -62,5 +62,5 @@ const itemSchema = new mongoose.Schema({
 
 // Start the server
 app.listen(port, '0.0.0.0', () => {
-    console.log(`API is running at http://0.0.0.0:${port}`);
+    console.log(`API is runningg at http://0.0.0.0:${port}`);
   });
